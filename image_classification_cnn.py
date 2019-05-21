@@ -79,6 +79,6 @@ test_dataset = test_dataset.batch(BATCH_SIZE)
 model.fit(train_dataset, epochs=10, steps_per_epoch=math.ceil(num_train_examples/BATCH_SIZE))
 
 # Evaluate the accuracy of the model
-# The accuracy of this CNN model is after 10 epoches. Quite impressive then
+# The accuracy of this CNN model is 0.9178 after 10 epoches. Quite impressive then
 test_loss, test_accuracy = model.evaluate(test_dataset, steps=math.ceil(num_test_examples/32))
 print('Accuracy on the dataset:', test_accuracy)
